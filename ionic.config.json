@@ -1,0 +1,7 @@
+{
+  "name": "firstpro",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
