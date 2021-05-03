@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Faculty List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let item of usr$ | async" (click)="navigatecomp(item,'addcomp')" mode="ios">
+  <ion-card-header>{{item.FirstName}}</ion-card-header>
+</ion-card>
+<ion-button (click)="navigate('home')" style="text-align: center;">Back</ion-button>
+</ion-content>

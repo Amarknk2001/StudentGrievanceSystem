@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Complaints 
+    </ion-title>
+    <ion-button slot="end" (click)="logout()">Logout</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let item of comp$ | async" padding mode="ios" style="text-align: center;" (click)="navigatecomp(item,'viewcomp')">
+  <ion-card-header>{{item.subject}}<div *ngIf="isadmin"> -{{item.Firstname}}</div></ion-card-header>
+</ion-card>
+<ion-card *ngIf="canaddcomp" (click)="navigate('compsea')" padding mode="ios" style="text-align: center;"><ion-card-header><ion-icon name="add"></ion-icon></ion-card-header>
+  <ion-card-title>ADD complaint</ion-card-title></ion-card>
+</ion-content> 
